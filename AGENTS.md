@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- GitHub Pages uses a separate static build (vite.pages.config.ts + pages/ entry rendering the exported Index); keep the home page free of server-only code so both builds work.
