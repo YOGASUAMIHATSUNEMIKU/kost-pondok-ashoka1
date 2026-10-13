@@ -1,9 +1,17 @@
 # Roadmap
 
 ## Selesai
-- Redesign website Kost Pondok Ashoka dengan seluruh konten asli dipertahankan (11 foto, harga Rp8.500.000/tahun, WhatsApp 085147618624)
-- Proyek terhubung ke GitHub: YOGASUAMIHATSUNEMIKU/pixel-harmony-framework (branch main) dan repository sudah dibuat publik
-- Situs dipublikasikan ke https://kost-pondok-ashoka.lovable.app (visibilitas publik)
+- Redesign website Kost Pondok Ashoka (konten asli dipertahankan, 11 foto asli, WhatsApp 085147618624).
+- Terhubung ke GitHub, repo dibuat publik: YOGASUAMIHATSUNEMIKU/kost-pondok-ashoka1 (dahulu pixel-harmony-framework).
+- Situs Lovable live: https://kost-pondok-ashoka.lovable.app
+- GitHub Pages: foto asli disalin ke repo, build statis (vite.pages.config.ts), workflow pages.yml terpasang.
+- Alamat situs dibuat tidak bergantung nama repo (base relatif), karena rename repo membuat aset 404.
+- README diperbarui: tautan situs di paling atas.
 
 ## Terbuka
-- [ ] Alamat singkat untuk dibagikan — user meminta "git.io". Layanan git.io milik GitHub sudah dihentikan (tidak menerima tautan baru sejak Januari 2022, seluruh pengalihan mati 29 April 2022), jadi alamat git.io tidak bisa dibuat. Menunggu keputusan user: domain sendiri, penyingkat tautan lain (s.id / bit.ly), atau tetap alamat Lovable saat ini.
+- Verifikasi situs github.io setelah sinkronisasi + build otomatis selesai:
+  https://yogasuamihatsunemiku.github.io/kost-pondok-ashoka1/
+- 4 workflow contoh (deno.yml, npm-publish.yml, npm-publish-github-packages.yml, webpack.yml) masih ada dan
+  gagal (tanda merah di Actions). Menunggu keputusan user: dihapus atau dibiarkan.
+- Alamat git.io tidak mungkin dibuat — layanan dihentikan GitHub (2022). Alternatif: domain sendiri atau
+  penyingkat tautan (s.id/bit.ly).

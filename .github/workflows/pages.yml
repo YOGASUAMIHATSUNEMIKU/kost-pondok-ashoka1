@@ -22,8 +22,6 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install
       - run: bunx vite build --config vite.pages.config.ts
-        env:
-          PAGES_BASE: /${{ github.event.repository.name }}/
       - uses: actions/configure-pages@v5
         with:
           enablement: true

@@ -6,7 +6,8 @@ import { fileURLToPath } from "node:url";
 
 export default defineConfig({
   root: "pages",
-  base: process.env.PAGES_BASE ?? "/pixel-harmony-framework/",
+  // Relative so the build keeps working if the repository is renamed again.
+  base: process.env.PAGES_BASE ?? "./",
   plugins: [react(), tailwindcss()],
   resolve: { alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) } },
   build: { outDir: "../dist-pages", emptyOutDir: true },
