@@ -4,17 +4,17 @@ import {
   ArrowUp, BedDouble, Bike, ChefHat, ChevronLeft, ChevronRight, Droplets, Images,
   KeyRound, MapPin, Menu, MessageCircle, ShowerHead, ShieldCheck, Store, UserCheck, Wifi, X,
 } from "lucide-react";
-import g1 from "@/assets/gallery/1791701693388.jpg.asset.json";
-import g2 from "@/assets/gallery/IMG-20261010-WA0037.jpg.asset.json";
-import g3 from "@/assets/gallery/IMG-20261010-WA0029.jpg.asset.json";
-import g4 from "@/assets/gallery/IMG-20261010-WA0040.jpg.asset.json";
-import g5 from "@/assets/gallery/IMG-20261010-WA0044.jpg.asset.json";
-import g6 from "@/assets/gallery/IMG-20261010-WA0047.jpg.asset.json";
-import g7 from "@/assets/gallery/IMG-20261010-WA0038.jpg.asset.json";
-import g8 from "@/assets/gallery/IMG-20261010-WA0036.jpg.asset.json";
-import g9 from "@/assets/gallery/IMG-20261010-WA0035.jpg.asset.json";
-import g10 from "@/assets/gallery/IMG-20261010-WA0046.jpg.asset.json";
-import g11 from "@/assets/gallery/IMG-20261010-WA0043.jpg.asset.json";
+import g1 from "@/assets/photos/1791701693388.jpg";
+import g2 from "@/assets/photos/IMG-20261010-WA0037.jpg";
+import g3 from "@/assets/photos/IMG-20261010-WA0029.jpg";
+import g4 from "@/assets/photos/IMG-20261010-WA0040.jpg";
+import g5 from "@/assets/photos/IMG-20261010-WA0044.jpg";
+import g6 from "@/assets/photos/IMG-20261010-WA0047.jpg";
+import g7 from "@/assets/photos/IMG-20261010-WA0038.jpg";
+import g8 from "@/assets/photos/IMG-20261010-WA0036.jpg";
+import g9 from "@/assets/photos/IMG-20261010-WA0035.jpg";
+import g10 from "@/assets/photos/IMG-20261010-WA0046.jpg";
+import g11 from "@/assets/photos/IMG-20261010-WA0043.jpg";
 
 const TITLE = "Kost Pondok Ashoka — Hunian Nyaman Dekat Kampus";
 const DESC = "Kost Pondok Ashoka di Cipadung, Cibiru, Bandung. Hunian nyaman, aman, dan strategis, 15 menit dari gerbang utama kampus. Rp8.500.000 per tahun.";
@@ -54,17 +54,17 @@ const FACILITIES = [
 ];
 
 const PHOTOS: { src: string; alt: string; caption: string }[] = [
-  { src: g1.url, alt: "Bangunan Kost Tampak Atas Drone", caption: "Tampak Atas Bangunan Kost" },
-  { src: g2.url, alt: "Tampak Depan Kost", caption: "Depan Kost & Gerbang Utama" },
-  { src: g3.url, alt: "Parkiran Motor", caption: "Parkiran Motor Luas" },
-  { src: g4.url, alt: "Kamar Tidur", caption: "Kamar Tidur (Isian Kasur)" },
-  { src: g5.url, alt: "Interior Kamar & Rak", caption: "Interior Kamar & Rak Dinding" },
-  { src: g6.url, alt: "Kamar Mandi Dalam", caption: "Kamar Mandi Dalam & Shower" },
-  { src: g7.url, alt: "Dapur Bersama", caption: "Dapur Bersama" },
-  { src: g8.url, alt: "Lantai 2 & Selasar", caption: "Area Selasar Lantai 2" },
-  { src: g9.url, alt: "Tangga Lantai 2", caption: "Akses Tangga Lantai 2" },
-  { src: g10.url, alt: "Area Jemuran", caption: "Area Jemuran Pakaian" },
-  { src: g11.url, alt: "Area Jemuran luar", caption: "Area Jemuran Pakaian luar" },
+  { src: g1, alt: "Bangunan Kost Tampak Atas Drone", caption: "Tampak Atas Bangunan Kost" },
+  { src: g2, alt: "Tampak Depan Kost", caption: "Depan Kost & Gerbang Utama" },
+  { src: g3, alt: "Parkiran Motor", caption: "Parkiran Motor Luas" },
+  { src: g4, alt: "Kamar Tidur", caption: "Kamar Tidur (Isian Kasur)" },
+  { src: g5, alt: "Interior Kamar & Rak", caption: "Interior Kamar & Rak Dinding" },
+  { src: g6, alt: "Kamar Mandi Dalam", caption: "Kamar Mandi Dalam & Shower" },
+  { src: g7, alt: "Dapur Bersama", caption: "Dapur Bersama" },
+  { src: g8, alt: "Lantai 2 & Selasar", caption: "Area Selasar Lantai 2" },
+  { src: g9, alt: "Tangga Lantai 2", caption: "Akses Tangga Lantai 2" },
+  { src: g10, alt: "Area Jemuran", caption: "Area Jemuran Pakaian" },
+  { src: g11, alt: "Area Jemuran luar", caption: "Area Jemuran Pakaian luar" },
 ];
 
 const HERO = PHOTOS[0]!;
@@ -97,7 +97,7 @@ function SectionHead({ eyebrow, title, sub }: { eyebrow: string; title: string; 
   );
 }
 
-function Index() {
+export function Index() {
   useReveal();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
