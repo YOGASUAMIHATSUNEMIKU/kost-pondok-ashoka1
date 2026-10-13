@@ -1,26 +1,39 @@
-# Pixel Harmony Framework
+# Kost Pondok Ashoka
 
-Implement exactly the screenshot and nothing else
+Website Kost Pondok Ashoka — "Hunian Nyaman, Aman, dan Strategis", 15 menit dari gerbang utama kampus, Cipadung, Cibiru, Bandung.
 
-This project was built with [Lovable](https://lovable.dev).
+## Buka website
 
-**Live app**: https://pixel-harmony-framework.lovable.app
+- **Situs (GitHub Pages):** https://yogasuamihatsunemiku.github.io/kost-pondok-ashoka1/
+- **Situs (Lovable hosting):** https://kost-pondok-ashoka.lovable.app
+- **Chat pengelola (WhatsApp):** https://wa.me/6285147618624
 
-## Build with Lovable
+## Isi
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/3c122004-0972-4869-95cf-b487d0112cda).
+Satu halaman: Beranda, Harga, Fasilitas, Galeri, Lokasi, Kontak.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- Harga Rp8.500.000 per tahun, sudah termasuk air dan listrik standar.
+- 6 fasilitas: kasur + rak, WiFi 24 jam, kamar mandi dalam, parkiran motor luas, dapur bersama, akses gerbang sampai jam 9.
+- 11 foto asli galeri dengan keterangan, plus peta lokasi.
+- Proyek sosial kelompok C++ — mentor Hiro Faletehan; anggota Icad, Alpi, Ashifa, Cepti, Ihsan, Putri, Reyhan, Nabil, Rayyan, Yoga.
+
+## Cara kerja
+
+- `src/routes/index.tsx` — seluruh isi halaman.
+- `src/styles.css` — warna dan animasi.
+- `src/assets/photos/` — 11 foto asli, ikut tersimpan di repository ini.
+- `pages/` + `vite.pages.config.ts` — versi statis untuk GitHub Pages.
+- `.github/workflows/pages.yml` — membangun dan menerbitkan situs setiap ada perubahan di `main`.
+
+Alamat situs mengikuti nama repository. Kalau repository diganti nama, alamat `github.io` ikut berubah dan situs dibangun ulang otomatis.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+git clone https://github.com/YOGASUAMIHATSUNEMIKU/kost-pondok-ashoka1.git
+cd kost-pondok-ashoka1
+bun install
+bun run dev
 ```
+
+Proyek ini dibuat dengan [Lovable](https://lovable.dev) dan tersinkron dua arah dengan repository ini.
