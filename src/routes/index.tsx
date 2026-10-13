@@ -53,7 +53,7 @@ const FACILITIES = [
   { icon: KeyRound, title: "Akses Gerbang sampai jam 9", desc: "Gerbang kos dapat diakses hingga pukul 9." },
 ];
 
-const PHOTOS = [
+const PHOTOS: { src: string; alt: string; caption: string }[] = [
   { src: g1.url, alt: "Bangunan Kost Tampak Atas Drone", caption: "Tampak Atas Bangunan Kost" },
   { src: g2.url, alt: "Tampak Depan Kost", caption: "Depan Kost & Gerbang Utama" },
   { src: g3.url, alt: "Parkiran Motor", caption: "Parkiran Motor Luas" },
@@ -66,6 +66,8 @@ const PHOTOS = [
   { src: g10.url, alt: "Area Jemuran", caption: "Area Jemuran Pakaian" },
   { src: g11.url, alt: "Area Jemuran luar", caption: "Area Jemuran Pakaian luar" },
 ];
+
+const HERO = PHOTOS[0]!;
 
 const ADVANTAGES = [
   { icon: Store, text: "Dekat dengan warung makan murah & minimarket." },
@@ -161,7 +163,7 @@ function Index() {
 
       {/* Hero */}
       <section id="beranda" className="relative flex min-h-[92vh] items-end overflow-hidden">
-        <img src={PHOTOS[0].src} alt={PHOTOS[0].alt} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={HERO.src} alt={HERO.alt} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-emerald-deep/60 to-emerald-deep/30" />
         <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-32">
           <p className="reveal text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground/80">Cipadung · Cibiru · Bandung</p>
@@ -314,13 +316,13 @@ function Index() {
 
       {/* Lightbox */}
       {lb !== null && (
-        <div role="dialog" aria-modal="true" aria-label={PHOTOS[lb].caption}
+        <div role="dialog" aria-modal="true" aria-label={PHOTOS[lb]!.caption}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-emerald-deep/95 p-4" onClick={() => setLb(null)}>
           <button onClick={() => setLb(null)} aria-label="Tutup" className="absolute right-4 top-4 rounded-full bg-primary-foreground/10 p-3 text-primary-foreground hover:bg-primary-foreground/20"><X className="h-6 w-6" /></button>
           <button onClick={(e) => { e.stopPropagation(); prev(); }} aria-label="Foto sebelumnya" className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-primary-foreground/10 p-3 text-primary-foreground hover:bg-primary-foreground/20"><ChevronLeft className="h-6 w-6" /></button>
           <button onClick={(e) => { e.stopPropagation(); next(); }} aria-label="Foto berikutnya" className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-primary-foreground/10 p-3 text-primary-foreground hover:bg-primary-foreground/20"><ChevronRight className="h-6 w-6" /></button>
-          <img src={PHOTOS[lb].src} alt={PHOTOS[lb].alt} onClick={(e) => e.stopPropagation()} className="max-h-[80vh] max-w-[88vw] rounded-xl object-contain" />
-          <p className="mt-4 text-center text-primary-foreground">{PHOTOS[lb].caption} <span className="text-primary-foreground/60">· {lb + 1}/{PHOTOS.length}</span></p>
+          <img src={PHOTOS[lb]!.src} alt={PHOTOS[lb]!.alt} onClick={(e) => e.stopPropagation()} className="max-h-[80vh] max-w-[88vw] rounded-xl object-contain" />
+          <p className="mt-4 text-center text-primary-foreground">{PHOTOS[lb]!.caption} <span className="text-primary-foreground/60">· {lb + 1}/{PHOTOS.length}</span></p>
         </div>
       )}
     </div>
